@@ -58,6 +58,8 @@ function init() {
     .fill(null)
     .map(() => Array(COLS).fill(0));
 
+  highScore = parseInt(localStorage.getItem("stackOverflownHighScore")) || 0;
+  document.getElementById("high-score").textContent = highScore;
   // Set initial target pattern
   setNewTargetPattern();
 
